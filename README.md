@@ -2,23 +2,6 @@
 
 This project aims to predict inventory requirements and sales forecasts for Rossmann drug stores based on historical sales data, seasonality, promotions, and external factors like holidays. By accurately predicting sales, store managers can optimize staffing and inventory levels, leading to better resource management and customer service.
 
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Dataset](#dataset)
-- [Objective](#objective)
-- [Methodology](#methodology)
-  - [Data Preprocessing](#data-preprocessing)
-  - [Feature Engineering](#feature-engineering)
-  - [Modeling](#modeling)
-  - [Model Interpretability](#model-interpretability)
-- [Evaluation Metrics](#evaluation-metrics)
-- [Results](#results)
-- [How to Run](#how-to-run)
-- [Insights](#insights)
-- [Future Improvements](#future-improvements)
-- [License](#license)
-
 ## Project Overview
 
 Rossmann operates more than 3,000 drug stores across seven European countries. Predicting daily sales in advance allows managers to plan their resources, schedule staff efficiently, and ensure adequate inventory. This project aims to predict sales for up to 6 weeks in advance across multiple stores in Germany using machine learning models.
