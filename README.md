@@ -8,6 +8,14 @@ Rossmann operates more than 3,000 drug stores across seven European countries. P
 
 The sales forecasting model incorporates a wide range of factors that affect store sales, including promotions, competition, holidays, and seasonality.
 
+## Objective
+
+The main objective of this project is to:
+
+1. **Predict daily sales** for each Rossmann store for a period of 6 weeks using historical data, promotions, holidays, and other factors.
+2. **Optimize inventory management** based on forecasted demand to help store managers make data-driven decisions.
+3. **Explore feature importance** and interpret model decisions using techniques like SHAP (SHapley Additive exPlanations).
+
 ## Dataset
 
 The dataset is from the Rossmann Kaggle competition and includes the following files:
@@ -22,14 +30,6 @@ Each store's sales are influenced by various factors, including:
 - **SchoolHoliday**: Whether the day is a school holiday.
 - **Promo**: Whether the store is running a promotion.
 - **CompetitionDistance**: The distance to the nearest competitor.
-
-## Objective
-
-The main objective of this project is to:
-
-1. **Predict daily sales** for each Rossmann store for a period of 6 weeks using historical data, promotions, holidays, and other factors.
-2. **Optimize inventory management** based on forecasted demand to help store managers make data-driven decisions.
-3. **Explore feature importance** and interpret model decisions using techniques like SHAP (SHapley Additive exPlanations).
 
 ## Methodology
 
@@ -77,30 +77,6 @@ The models are evaluated based on the following metrics:
 - **XGBoost**: RMSE = 1055.65, MAE = 632.91
 
 The **Random Forest model** performed the best, with the lowest RMSE and MAE, making it the best candidate for sales forecasting in this context.
-
-### Code Explanation
-
-The code is designed to predict inventory and sales requirements for Rossmann stores based on historical data, using several machine learning models to evaluate different approaches. It combines sales data with external factors like promotions, holidays, and competition to predict future sales.
-
-1. **Data Preprocessing**:
-   - The data is cleaned by handling missing values, converting dates, and extracting important date-related features such as day of the week, month, and whether it’s a holiday.
-   - Additional features like rolling averages and lag features are introduced to capture past trends.
-
-2. **Modeling**:
-   - Multiple machine learning models are used, including **Linear Regression**, **Random Forest**, and **XGBoost**. Random Forest performed the best, with the lowest RMSE.
-   - **Prophet** is used to model time-series data and account for seasonality and long-term trends.
-   - Each model is evaluated using RMSE and MAE to gauge prediction accuracy.
-
-3. **SHAP Interpretability**:
-   - SHAP is used to explain model predictions, showing the contribution of each feature to the forecasted sales, which helps in understanding how factors like `Promo` and `CompetitionDistance` affect sales predictions.
-
-### Key Insights
-
-1. **Random Forest Performance**: The Random Forest model provided the best predictions, with an RMSE of 846.88, showing its ability to capture the complex relationships between features like holidays and promotions.
-2. **Promotion and Holidays**: As expected, promotions and holidays significantly drive sales, which can be seen in the high importance of these features in the models.
-3. **Feature Importance**: SHAP analysis revealed that the most critical features for predicting sales were promotions, day of the week, and competition distance, which store managers can focus on to drive sales. 
-
-By implementing these methods, store managers can effectively predict sales and optimize inventory and staffing levels accordingly.
 
 ### Source:
 
